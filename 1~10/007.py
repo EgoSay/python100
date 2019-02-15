@@ -7,7 +7,7 @@ list1 = [1, 2, 3]
 
 # 方法1
 list2 = list1[:]
+print(list2)
 # 方法2
 list3 = list1.copy()
-print(list2)
-
+print(list3)
