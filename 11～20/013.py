@@ -3,7 +3,6 @@
 # @Date    : 2019/2/25 下午3:46
 # @IDE     : PyCharm
 
-# hundred ,ten_digits, digits= 0
 
 for i in range(100, 1000):
     hundred = int(i / 100)
