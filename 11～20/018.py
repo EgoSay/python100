@@ -7,7 +7,7 @@
 def add(x, y):
     x_sum = x
     flag = x
-    for i in range(y):
+    for i in range(y - 1):
         x = x * 10 + flag
         x_sum += x
     return x_sum
