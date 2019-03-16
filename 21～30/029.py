@@ -8,16 +8,22 @@
 from math import floor
 
 
-def func(num, figures):
-    if num / 10 == 0 and num % 10 != 0:
-        print(floor(num % 10))
-    elif num / 10 >= 1:
+def func(n, figures, li):
+    # n < 10是一个个位数
+    if floor(n / 10) == 0 and n % 10 != 0:
+        li.append(floor(n))
+    # n > 10
+    elif n / 10 >= 1:
         figures += 1
-        print(floor(num % 10))
-        func(num / 10, figures)
-    return figures
+        li.append(floor(n % 10))
+        func(n / 10, figures, li)
+    return li
 
 
 if __name__ == '__main__':
     num = int(input())
-    print("这是一个{0}位数".format(func(num, 1)))
+    lists = list()
+    size = len(func(num, 1, lists))
+    print("这是一个{0}位数".format(size))
+    for i in range(size):
+        print(lists[i])
