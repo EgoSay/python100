@@ -2,9 +2,6 @@
 # @Email   : adairchan.dream@gmail.com
 # @Date    : 2019/4/30 20:30
 # @IDE     : PyCharm
-"""
-优化解法，先将前m个数逆转，再将后面的数逆转，最后全部逆转，相当于就是把这前m个数后移了
-"""
 import random
 
 
@@ -30,6 +27,9 @@ if __name__ == '__main__':
     arr = [random.randrange(3, 100, 2) for i in range(n)]
     m = len(arr) - m
     print(arr)
+    """
+    优化解法，先将前 n-m 个数逆转，再将后面的数逆转，最后全部逆转，相当于就是把这前m个数后移了
+    """
     arr = swap(arr, 0, m - 1)
     print(arr)
     arr = swap(arr, m, len(arr) - 1)
